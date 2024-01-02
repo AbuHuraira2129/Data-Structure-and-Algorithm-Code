@@ -1,4 +1,4 @@
-// Singly Link List
+// Singly Linked List
 // -------------------------
 // 1. Insert at Beginning
 // 2. Insert in Middle

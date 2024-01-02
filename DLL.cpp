@@ -1,4 +1,4 @@
-// Doubly Link List
+// Doubly Linked List
 // -------------------------
 // 1. Insert at Beginning
 // 2. Insert at End
