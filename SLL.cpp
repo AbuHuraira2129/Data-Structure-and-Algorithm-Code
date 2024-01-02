@@ -1,4 +1,12 @@
 // Singly Link List
+// -------------------------
+// 1. Insert at Beginning
+// 2. Insert in Middle
+// 3. Insert at End
+// 4. Delete at Beginning
+// 5. Delete at End
+// 6. Searching
+// 7. Display
 
 #include<iostream>
 #include<string>
@@ -12,12 +20,16 @@ struct node{
 node* head = NULL;
 node* current = NULL;
 
+// 1. Insert at Beginning
+
 void insertBeg(int item){
 	node* newnode = new node;
 	newnode->data = item;
 	newnode->link = head;
 	head = newnode;
 }
+
+// 2. Insert in Middle
 
 void insertMiddle(int item){
 	
@@ -47,6 +59,8 @@ void insertMiddle(int item){
 	
 }
 
+// 3. Insert at End
+
 void insertEnd(int item){
 	
 	node* newnode = new node;
@@ -65,6 +79,8 @@ void insertEnd(int item){
 	}
 }
 
+// 4. Delete at Beginning
+
 void deleteBeg(){
 	if(head==NULL){
 		cout << "List is Empty!" << endl;
@@ -76,6 +92,8 @@ void deleteBeg(){
 		delete temp;
 	}	
 }
+
+// 5. Delete at End
 
 void deleteEnd(){
 
@@ -92,9 +110,9 @@ void deleteEnd(){
 		temp->link = NULL;
 		delete current;
 	}
-	
-
 }
+
+// 6. Searching
 
 void search(int item) {
     current = head;
@@ -116,6 +134,8 @@ void search(int item) {
     }
 }
 
+// 7. Display
+
 void display(){
 	
 	current = head;
@@ -126,6 +146,8 @@ void display(){
 	
 	cout << endl;
 }
+
+// Main Function
 
 int main(){
 	insertBeg(1);
