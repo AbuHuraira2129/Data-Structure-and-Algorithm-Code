@@ -6,8 +6,9 @@
 // 4. Delete at Beginning
 // 5. Delete at End
 // 6. Searching
-// 7. Simple Display
-// 8. Reverse Display
+// 7. Value Updating
+// 8. Simple Display
+// 9. Reverse Display
 
 #include<iostream>
 #include<string>
@@ -147,6 +148,37 @@ void deleteEnd() {
     temp->next = NULL;
     
     delete current;
+}
+
+// Value Updating
+
+void valueUpdate(int item, int newValue)
+{
+	current = head;
+	bool updated = false;
+
+	while (current != NULL)
+	{
+		if (current->data == item)
+		{
+			current->data = newValue;
+			updated = true;
+			break;
+		}
+		else
+		{
+			current = current->next;
+		}
+	}
+
+	if (updated)
+	{
+		cout << "Value Updated!" << endl;
+	}
+	else
+	{
+		cout << "Value not found to be updated!" << endl;
+	}
 }
 
 // Simple display
